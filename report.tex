@@ -1,0 +1,243 @@
+\documentclass[14pt, a4paper, oneside, bold]{extarticle}
+
+\usepackage[english, russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[14pt]{extsizes}
+\usepackage{listingsutf8}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+
+\usepackage{setspace}
+\singlespacing
+\onehalfspacing
+\doublespacing
+
+\allowdisplaybreaks
+\binoppenalty = 10000
+\relpenalty = 10000
+\textheight = 23cm
+\textwidth = 20cm
+\oddsidemargin = 0pt
+%\topmargin = -1.5cm
+\parskip = 0pt
+\tolerance = 2000
+\flushbottom
+
+\usepackage[left=30mm, right=20mm, top=20mm, bottom=30mm, nohead, footskip=10mm]{geometry}
+% bottom=2cm, bindingoffset=0cm]
+
+\pagestyle{plain}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\begin{document}
+
+\allowdisplaybreaks[1]
+
+\begin{titlepage}
+\setstretch{1}
+\begin{center}
+\ \vspace{-1.5cm}
+
+\includegraphics[width=0.5\textwidth]{msu_logo.eps}\\
+{\bfseries Московский государственный университет имени М.В. Ломоносова \\
+Факультет вычислительной математики и кибернетики\\
+Кафедра исследования операций}
+
+\vspace{3cm}
+
+{\Large Лаврухин Ефим Валерьевич}
+
+\vspace{1cm}
+
+{\Large\bfseries
+Применение нейронных сетей для сегментации томографических изображений геологических пород\\}
+
+\vspace{1cm}
+
+{\textbf \large МАГИСТЕРСКАЯ ДИССЕРТАЦИЯ}
+\end{center}
+
+\vfill
+
+\begin{flushright}
+  \textbf{Научный руководитель:}\\
+  к.ф.-м.н., доцент\\
+  Д.В.~Денисов
+\end{flushright}
+
+\vfill
+
+\begin{center}
+Москва, 2018
+\end{center}
+
+\vspace{1cm}
+
+\enlargethispage{2\baselineskip}
+
+\end{titlepage}
+
+
+\setstretch{1.5}
+
+\newpage
+
+\section*{Введение}
+
+\textbf{Актуальность темы исследования.} В настоящее время добыча полезных ископаемых требует большое количество 
+данных о разрабатываемых породах-коллекторах. Эти данные получают в том числе с помощью методов цифровой петрофизики, которые работают с  
+2-D или 3-D изображениями, сделанными с помощью рентгеновской томографии \cite{1}. Большинство изображений строения пород представлены в градациях серого, которые указывают на интенсивность поглощения рентгеновских лучей. На практике любой метод численного расчета характеристик исходных пород состоит из нескольких отдельных этапов. 
+И первый этап -- это сегментация входного изображения, разделение его
+на несколько различных фаз по плотности вещества. В простейшем случае выполняется бинаризация -- разделение на твёрдую породу и поры \cite{2}. 
+
+\textbf{Цель} данной работы -- применить методы глубинного обучения, а именно полносвёрточные нейронные сети, для задачи сегментации изображений геологических пород.
+
+\textbf{Научная новизна.} В настоящее время существует большое количество методов сегментации. Они существенно отличаются в используемых предположениях о входных изображениях и математическом аппарате. Вот некоторые из них: градиентные \cite{16}, морфологические, случайные поля \cite{14}, \cite{15}, методы Монте-Карло \cite{13}. У этих методов есть ряд достоинств: присутствует математическая формализация, относительная простота постановки задачи, интерпретируемость результатов. Но в то же время все они обладают серьёзным недостатком -- в них присутствуют гиперпараметры, которые сильно влияют на качество результата. Это делает затруднительным их применение без оператора, который контролирует процесс и подбирает нужные значения параметров для  конкретных входных данных. 
+
+Относительно недавно появились методы сегментации с использованием машинного обучения. Они так же применяются и в сегментации изображений геологических пород \cite{3}, \cite{4}, \cite{5}. Глубинное обучение - это подкласс моделей машинного обучения, в которых используется сложная многоуровневая композиция слоёв для извлечения нелинейных признаков исходного объекта. Главные преимущества этих моделей - это высокое качество(выше, чем у других методов, решающих аналогичные задачи) и полная автономность обучения(для того, чтобы построить качественную модель на имеющихся данных не требуется участие человека).
+
+Сейчас свёрточные нейронные сети являются, фактически, state-of-the-art в задачах обрабоки изображений \cite{6} и используются во многих прикладных областях: биологии, медицине, распознавании образов \cite{11}, \cite{12}. На текущий момент выпущено достаточно много работ, в которых исследуются методы глубинного обучения для решения связанных с сегментацией пород задач. В частности для  построения стохастической реконструции пород с последующим моделированием физических свойств \cite{7}, \cite{8}, \cite{9}, \cite{10}. Но статей, в которых глубинное обучение применяется для сегментации геологических пород, крайне мало. 
+
+В ходе работы для достижения поставленной цели решались следующие 
+\textbf{задачи}:
+\begin{enumerate}
+	\item Выбор полносвёртночной архитектуры нейронной сети, 
+	которая выполняет сегментацию изображений томограмм.
+	\item Решение проблемы отсутствия размеченных обучающих данных.
+	\item Построение стабильного алгоритма обучения сети.
+	\item Учёт внутри модели 3-D структуры входных данных.
+	\item Сравнение полученных результатов с результатами других 			моделей для сегментации геологических изображений.
+	\item Сравнение физических характеристик, полученных с помощью 
+	отсегментированных моделью изображений, с характеристиками 				исходного образца, вычисленными с помощью физических симуляций.
+\end{enumerate}
+  
+\newpage
+
+\section{Постановка задачи}
+
+\section{Заключение}
+
+
+\addcontentsline{toc}{chapter}{Литература}
+\begin{thebibliography}{99}
+
+\bibitem{1} S. Karimpoulia
+	, P. Tahmasebib,
+	, H. L. Ramandic
+	, P. Mostaghimid
+	, M. Saadatfar, 
+	``Stochastic modeling of coal fracture network by direct use of microcomputed
+tomography images'', International Journal of Coal Geology 179, 153-163, 2017.
+
+\bibitem{2} Jeff T. Gostick, 
+	``Versatile and efficient pore network extraction method using marker-based watershed segmentation'', Physical Review E 96, 2017.
+
+\bibitem{3} S. Chauhan
+	, W. Rühaak,
+	, H. Anbergen
+	, A. Kabdenov
+	, M. Freise
+	, T. Wille
+	, I. Sass,
+	``Phase segmentation of X-ray computer tomography rock images
+using machine learning techniques: an accuracy
+and performance study'', Solid Earth, 7, 1125–1139, 2016.
+	
+\bibitem{4} F. Khan
+	, F. Enzmann,
+	, M. Kersten, 
+	``Multi-phase classification by a least-squares support vector machine
+approach in tomography images of geological samples'', Solid Earth, 7, 481–492, 2016.
+
+\bibitem{5} S. Chauhan
+	, W. Rühaak,
+	, F. Khan
+	, F. Enzmann
+	, P. Mielke
+	, I. Sass,
+	``Processing of rock core microtomography images: Using seven
+different machine learning algorithms'', Computers \& Geosciences, 86, 120-128, 2016.
+
+\bibitem{6} O. Ronneberger
+	, P. Fischer
+	, T. Brox,
+	``U-Net: Convolutional Networks for Biomedical
+Image Segmentation'', arXiv:1505.04597v1, 2015.
+
+\bibitem{7} L. Mosser
+	, O. Dubrule,
+	, Martin J. Blunt, 
+	``Reconstruction of three-dimensional porous media
+using generative adversarial neural networks'', 
+arXiv:1704.03225v1, 2017
+
+\bibitem{8} Brian L. DeCost
+	, T. Francis
+	, Elizabeth A. Holm, 
+	``Exploring the microstructure manifold: image
+texture representations applied to ultrahigh 
+carbon steel microstructures'', 
+arXiv:1702.01117v2, 2017
+
+\bibitem{9} Ruijin Cang
+	, Yaopengxiao Xu
+	, Shaohua Chen
+	, Yongming Liu
+	, Yang Jiao
+	,M. Yi Ren,
+	`Microstructure Representation and
+Reconstruction of Heterogeneous Materials via
+Deep Belief Network for Computational Material 
+Design'', 
+arXiv:1612.07401v3, 2017
+
+\bibitem{10} N. Lubbers
+	, T. Lookman
+	, K. Barros,
+	``Inferring low-dimensional microstructure representations using
+convolutional neural networks'', 
+arXiv:1611.02764v1, 2016
+
+\bibitem{11} A. S. Razavian
+	, H. A. Josephine
+	, S. S. Carlsson,
+	``CNN Features off-the-shelf: an Astounding Baseline for Recognition'', 
+arXiv:1403.6382v3, 2014.
+
+\bibitem{12} Kwang Moo Yi
+	, Eduard Trulls
+	, Vincent Lepetit
+	, Pascal Fua,
+	``LIFT: Learned Invariant Feature Transform'', 
+arXiv:1603.09114v2, 2016.
+
+\bibitem{13} С.А. Эль-Хатиб,
+	``Сегментация изображений с мопощью смешаного и экспоненциального алгоритмов роя частиц'', 
+Информатика и кибернетика, 1, 2015.
+
+\bibitem{14} H. Deng
+	, D.A. Clausi, 
+	``Unsupervised image segmentation using a simple MRF model with a new implementation scheme'', 
+Pattern Recognition, 37, 2323-2335, 2004.
+
+\bibitem{15} H. Deng
+	, D.A. Clausi, 
+	``Image segmentation using Markov Random Field Model in Fully Parallel Cellular Nerwork Architecture'', 
+Real-time Imaging, 6, 195-211, 2000.
+
+\bibitem{16} H. Deng
+	, D.A. Clausi, 
+	``Improved Workflow for Unsupervised Multiphase Image Segmentation'', 
+arXiv:1710.0967, 2017.
+
+\end{thebibliography}
+
+\end{document}
