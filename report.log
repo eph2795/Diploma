@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.17)  2 MAY 2018 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.17)  3 MAY 2018 19:57
 entering extended mode
 **./report.tex
 (report.tex
@@ -990,18 +990,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-[9] [10] [11]
-Underfull \hbox (badness 1248) in paragraph at lines 372--379
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+[11] [12]
+Underfull \hbox (badness 1248) in paragraph at lines 410--417
 \T2A/cmr/m/n/14.4 microstructure manifold: image texture representations applie
 d to
  []
 
-[12] [13] (report.aux) ) 
+[13] [14] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 6187 strings out of 493333
- 83153 string characters out of 3138766
- 164197 words of memory out of 3000000
- 9579 multiletter control sequences out of 15000+200000
+ 6191 strings out of 493333
+ 83203 string characters out of 3138766
+ 164237 words of memory out of 3000000
+ 9583 multiletter control sequences out of 15000+200000
  12560 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,19n,34p,1433b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1019,9 +1023,9 @@ s/cm/cmr10.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmr
 :/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progr
 am files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program files
 (x64)/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (14 pages, 256609 bytes).
+Output written on report.pdf (15 pages, 265598 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
+ 347 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
