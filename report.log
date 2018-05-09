@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.17)  3 MAY 2018 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.17)  9 MAY 2018 18:00
 entering extended mode
 **./report.tex
 (report.tex
@@ -970,62 +970,90 @@ Package pdftex.def Info: msu_logo-eps-converted-to.pdf used on input line 49.
  [1
 
 {C:/Users/Efim/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./msu_logo-e
-ps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ps-converted-to.pdf>] (report.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 
- [1]
-[2] [3]
-LaTeX Font Info:    Try loading font information for U+msa on input line 128.
- ("D:\Program files(x64)\MikTeX\tex\latex\amsfonts\umsa.fd"
+("D:\Program files(x64)\MikTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 128.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 ("D:\Program files(x64)\MikTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [4] [5] [6]
+))
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [1]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+ [2]
+[3] [4] [5] [6] [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-[11] [12]
-Underfull \hbox (badness 1248) in paragraph at lines 410--417
+ [9]
+[10] [11]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 365.
+
+ ("D:\Program files(x64)\MikTeX\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 365.
+ [12]
+[13] [14] [15]
+Overfull \hbox (6.1154pt too wide) in paragraph at lines 435--441
+[]\T2A/cmr/m/n/14.4 В ка-че-стве це-ле-во-го функ-ци-о-на-ла ис-поль-зо-вал-ся 
+(14[]) с $\OML/cmm/m/it/14.4  \OT1/cmr/m/n/14.4 = 1\OML/cmm/m/it/14.4 ; " \OT1
+/cmr/m/n/14.4 = 10[]$\T2A/cmr/m/n/14.4 .
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 442--445
+[]\T2A/cmr/m/n/14.4 В про-цес-се обу-че-ния от-сле-жи-ва-лась ве-ли-чи-на оп-ти
+-ми-зи-ру-е-мо-го
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17] [18] [19]
+Underfull \hbox (badness 1248) in paragraph at lines 528--535
 \T2A/cmr/m/n/14.4 microstructure manifold: image texture representations applie
 d to
  []
 
-[13] [14] (report.aux) ) 
+[20] [21] [22] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 6191 strings out of 493333
- 83203 string characters out of 3138766
+ 6214 strings out of 493333
+ 83553 string characters out of 3138766
  164237 words of memory out of 3000000
- 9583 multiletter control sequences out of 15000+200000
- 12560 words of font info for 35 fonts, out of 3000000 for 9000
+ 9599 multiletter control sequences out of 15000+200000
+ 13365 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,19n,34p,1433b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Efim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\lh\lh-t2a\dpi600\larm1440.pk> <C:\Users\Efim\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\lh\lh-t2a\dpi600\labx2074.pk> <C:\Users\Efim\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\lh\lh-t2a\dpi600\larm2074.pk> <C:\Users\Efim\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk><D:/Program files(x64)/MikT
-eX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program files(x64)/MikTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program files(x64)/MikTeX/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D
-:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progr
-am files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program files
-(x64)/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (15 pages, 265598 bytes).
+ <C:\Users\Efim\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\Efim\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk> <C:\Users\Efim\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx2074.pk> <C:\Users\Efim\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm2074.pk> <C:\Users\Efim\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk><D:/Program fil
+es(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program files(x64)
+/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program files(x64)/MikTeX
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program files(x64)/MikTeX/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><D:/Program files(x64)/MikTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/P
+rogram files(x64)/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (23 pages, 309571 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
+ 448 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
