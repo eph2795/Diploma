@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.17)  10 MAY 2018 01:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.17)  10 MAY 2018 02:33
 entering extended mode
 **./report.tex
 (report.tex
@@ -1129,7 +1129,7 @@ File: data/images/learning_progress_SoilB-2_Urna_22_carb96558.png Graphic file
 (type png)
  <use data/images/learning_progress_SoilB-2_Urna_22_carb96558.png>
 Package pdftex.def Info: data/images/learning_progress_SoilB-2_Urna_22_carb9655
-8.png used on input line 507.
+8.png used on input line 508.
 (pdftex.def)             Requested size: 450.69417pt x 450.68068pt.
 
 
@@ -1144,73 +1144,99 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
  [19 <./data/images/learning_progress_SoilB-2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20 <./data/images/learning_progress_SoilB-2_Urna_22_carb96558.png>] [21]
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 551--563
+ [20 <./data/images/learning_progress_SoilB-2_Urna_22_carb96558.png>]
+<data/images/accuracy.jpg, id=94, 722.7pt x 722.7pt>
+File: data/images/accuracy.jpg Graphic file (type jpg)
+
+<use data/images/accuracy.jpg>
+Package pdftex.def Info: data/images/accuracy.jpg used on input line 525.
+(pdftex.def)             Requested size: 409.71692pt x 409.71571pt.
+ [21 <./data/images/accuracy.jpg>]
+<data/images/all_carb71.png, id=98, 1806.75pt x 1084.05pt>
+File: data/images/all_carb71.png Graphic file (type png)
+
+<use data/images/all_carb71.png>
+Package pdftex.def Info: data/images/all_carb71.png used on input line 541.
+(pdftex.def)             Requested size: 450.69417pt x 270.41635pt.
+
+<data/images/Soil_Urna_SPE_carb10_58_box3.png, id=99, 1806.75pt x 1084.05pt>
+File: data/images/Soil_Urna_SPE_carb10_58_box3.png Graphic file (type png)
+
+<use data/images/Soil_Urna_SPE_carb10_58_box3.png>
+Package pdftex.def Info: data/images/Soil_Urna_SPE_carb10_58_box3.png used on i
+nput line 548.
+(pdftex.def)             Requested size: 450.69417pt x 270.41635pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22
+
+ <./data/images/all_carb71.png>]
+Underfull \vbox (badness 3668) has occurred while \output is active []
+
+ [23 <./data/images/Soil_Urna_SPE_carb10_58_box3.png>]
+Overfull \hbox (39.22021pt too wide) in paragraph at lines 576--588
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 570--582
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 595--607
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 588--600
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 613--625
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 607--619
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 632--644
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 626--638
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 650--662
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 645--657
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 668--680
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 664--676
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 686--698
 [][] 
  []
 
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 683--695
+Overfull \hbox (33.22168pt too wide) in paragraph at lines 705--717
 [][] 
  []
 
+[24] [25] [26] [27
 
-Overfull \hbox (29.50034pt too wide) in paragraph at lines 702--714
-[][] 
- []
-
-[22] [23] [24] [25
-
-] [26]
-Underfull \hbox (badness 1248) in paragraph at lines 800--807
+] [28]
+Underfull \hbox (badness 1248) in paragraph at lines 803--810
 \T2A/cmr/m/n/14.4 microstructure manifold: image texture representations applie
 d to
  []
 
-[27] [28]
-Underfull \hbox (badness 2503) in paragraph at lines 871--877
+[29] [30]
+Underfull \hbox (badness 2503) in paragraph at lines 874--880
 \T2A/cmr/m/n/14.4 Detection using Deep Convolutional Neural Network: A Kaggle
  []
 
-[29] (report.aux) ) 
+[31] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 6621 strings out of 493333
- 89327 string characters out of 3138766
- 294215 words of memory out of 3000000
- 9975 multiletter control sequences out of 15000+200000
+ 6639 strings out of 493333
+ 89848 string characters out of 3138766
+ 291229 words of memory out of 3000000
+ 9989 multiletter control sequences out of 15000+200000
  19631 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,19n,34p,1370b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,19n,34p,1376b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Efim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\unk
 nown\unknown\dpi600\larm1200.pk> <C:\Users\Efim\AppData\Local\MiKTeX\2.9\fonts\
 pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk> <C:\Users\Efim\AppData\Local\MiKTeX\2.9
@@ -1229,9 +1255,9 @@ msfonts/cm/cmr7.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb><D:/Program files(x64)/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on report.pdf (30 pages, 662240 bytes).
+Output written on report.pdf (32 pages, 870972 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
+ 540 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
